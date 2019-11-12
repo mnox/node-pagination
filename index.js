@@ -23,8 +23,7 @@ function handlePeoplePage(res, people) {
 
 function formatPeople(req, res, next) {
     const sortParams  = ['name', 'height', 'mass'],
-          sortBy      = req.query.sortBy,
-          isNumeric   = sortBy !== "name";
+          sortBy      = req.query.sortBy;
 
     let peopleArray = Object.values(res.locals.people);
 
